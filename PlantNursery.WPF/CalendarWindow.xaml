@@ -1,0 +1,19 @@
+<Window x:Class="PlantNursery.WPF.CalendarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Kalendar njege - PlantNursery" Height="450" Width="700">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Vizualni kalendar njege"
+                   FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+
+        <Calendar Grid.Row="1" x:Name="CareCalendar" SelectedDatesChanged="CareCalendar_SelectedDatesChanged"/>
+
+        <ListBox Grid.Row="2" x:Name="TaskList" Margin="0,10,0,0"/>
+    </Grid>
+</Window>
